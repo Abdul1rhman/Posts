@@ -1,0 +1,170 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.nav-cont{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: last baseline;
+    margin-top: 20px;
+}
+
+
+
+.nav-cont ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+}
+.nav-cont ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: inherit;
+
+}
+
+.home-cont{
+    
+    
+    width: 100%;
+    background-color: rgb(237, 191, 131);
+
+}
+
+.cont{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* background-color: aqua  ; */
+}
+
+.home-head{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.post-cont{
+    padding: 15px;
+    border-radius: 5px;
+    /* background-color: aquamarine; */
+
+}
+
+.card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+   
+    min-height: 200px;
+    
+
+}
+
+.card h2{
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+    
+    
+
+}
+
+.card p{
+    font-size: 25px;
+    margin-top: 10px;
+    
+    
+
+}
+
+.card Button{
+    width: 100px;
+    
+    
+    
+
+}
+
+.but{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+   
+}
+
+/* .form{
+ display: flex;
+ flex-direction: column;
+ gap: 40px;   
+}
+
+.form-grouP{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-grouP label{
+    display: block;
+   
+    
+} */
+
+@media (max-width:787px) {
+    .home-head{
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        text-align: center;
+    }
+   
+    .card p{
+        font-size: 15px;
+        margin-top: 5px;
+        
+        
+    
+    }
+
+    .card h2{
+        font-size: 20px;
+        margin-top: 5px;
+        
+        
+    
+    }
+
+    .card .my{
+       
+        font-size: 12px;
+        
+
+        
+        
+   
+    }
+
+    .but{
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        height: 100%;
+        align-items: end;
+    }
+
+    .time{
+        font-size: 12px;
+    }
+}
+
