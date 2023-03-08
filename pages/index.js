@@ -13,7 +13,7 @@ const [error, setError]=useState('')
   const handelDelete= async (id) => {
 
     try {
-      let response = await fetch(`/api/${id}`, {
+      let response = await fetch(`https://posts-98.vercel.app/api/${id}`, {
         method: "DELETE",
         // headers: {
         //   Accept:
@@ -77,7 +77,7 @@ export default Index
 export async function getServerSideProps() {
 
   try {
-    let response = await fetch('/api/getPosts');
+    let response = await fetch('https://posts-98.vercel.app/api/getPosts');
     let posts = await response.json();
 
     return {

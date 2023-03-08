@@ -16,7 +16,7 @@ function Add() {
         e.preventDefault();
         if (title && content) {
           try {
-            let response = await fetch("/api/addPost", {
+            let response = await fetch("https://posts-98.vercel.app/api/addPost", {
               method: "POST",
               body: JSON.stringify({
                 title,
