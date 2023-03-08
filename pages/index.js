@@ -13,7 +13,7 @@ const [error, setError]=useState('')
   const handelDelete= async (id) => {
 
     try {
-      let response = await fetch(`http://localhost:3000/api/${id}`, {
+      let response = await fetch(`/api/${id}`, {
         method: "DELETE",
         // headers: {
         //   Accept:
