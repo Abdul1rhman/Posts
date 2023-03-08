@@ -63,7 +63,7 @@ const [error, setError]=useState('')
           </div>
     )
     
-  }):<h1>there is no posts ??</h1>
+  }):<h1 style={{textAlign:'center', paddingBottom:'200px',marginTop:'200px',}}>there is no posts &#128542;??</h1>
 }
       </Container>
       
