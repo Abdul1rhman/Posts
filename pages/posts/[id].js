@@ -14,7 +14,7 @@ function Postdet({post}) {
       e.preventDefault();
       if (title && content) {
         try {
-          let response = await fetch(`https://posts-98.vercel.app/api/${post._id}`, {
+          let response = await fetch(`https://posts-sh.vercel.app/api/${post._id}`, {
             method: "PUT",
             body: JSON.stringify({
               title,
@@ -73,7 +73,7 @@ const {params}=context
 
 
   try {
-    let response = await fetch(`https://posts-98.vercel.app/api/${params.id}`);
+    let response = await fetch(`https://posts-sh.vercel.app/api/${params.id}`);
     let post = await response.json();
 
     return {
