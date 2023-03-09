@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaRegEdit } from 'react-icons/fa';
-import { AiOutlineDelete } from 'react-icons/ai';
+import { AiOutlineDelete, AiOutlinePlus } from 'react-icons/ai';
+import { BsPatchPlus } from 'react-icons/bs';
 
 
 
@@ -32,8 +33,9 @@ const [error, setError]=useState('')
 
 
   return (
-    <div className='home-cont'> 
+    
       <Container>
+      <div className='home-cont'> 
       <h1 className='home-head'>Recent Time Line</h1>
 
     {posts.length >0?
@@ -65,11 +67,15 @@ const [error, setError]=useState('')
     )
     
   }):<h1 style={{textAlign:'center', paddingBottom:'200px',marginTop:'200px',}}>there is no posts &#128542;??</h1>
-}
+}      
+        <Link className='add-post-but' style={{textDecoration:'none',color:'white'}} href="/posts"><BsPatchPlus style={{fontSize:'40px'}}/></Link>
+
+      </div>
       </Container>
       
+      
 
-    </div>
+    
   )
 }
 
