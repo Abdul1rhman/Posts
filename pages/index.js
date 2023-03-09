@@ -9,6 +9,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 
 
 function Index({posts}) {
+
 const [error, setError]=useState('')
   const handelDelete= async (id) => {
 
@@ -31,7 +32,7 @@ const [error, setError]=useState('')
 
 
   return (
-    <div className='home-cont'>
+    <div className='home-cont'> 
       <Container>
       <h1 className='home-head'>Recent Time Line</h1>
 
@@ -49,7 +50,7 @@ const [error, setError]=useState('')
                 
                 </div>
                 <Card.Footer className="text-muted mt-4 time">
-                date: {item.today}- hour: {item.hour.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })} 
+                date: {item.today}- hour: {item.hour} 
                 <div style={{ color:'black',display:'flex', justifyContent:'end',alignItems:'center', gap:'10px',fontSize:'20px'}}>
                 <Link className="" style={{textDecoration:'none', color:'black',display:'flex', justifyContent:'end',alignItems:'center'}} href={`/posts/${item._id}`}><FaRegEdit/></Link>
                 <div style={{cursor:'pointer',display:'flex', justifyContent:'end',alignItems:'center',color:'red'}} className="  " onClick={e=>{handelDelete(item._id)}}><AiOutlineDelete/></div>

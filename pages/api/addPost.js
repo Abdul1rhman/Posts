@@ -13,7 +13,10 @@ const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 const yyyy = today.getFullYear();
 today = mm + '/' + dd + '/' + yyyy;
 
-let hour = new Date();
+const time = new Date();
+const hour= time.toLocaleString('en-sa', { hour: 'numeric', minute: 'numeric', hour12: true })
+
+
 
 
 const post = await db.collection("posts").insertOne({
