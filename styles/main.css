@@ -17,7 +17,10 @@ nav{
     color:#FFFFFF;
     margin-top: 0;
     margin-bottom: 25px;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    
 }
+
 
 .nav-cont{
     display: flex;
@@ -34,6 +37,7 @@ nav{
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: space-around;
     
 
 }
@@ -84,7 +88,6 @@ nav{
     /* background-color: rgb(255, 255, 255); */
     padding: 20px;
     border: none;
-    /* border-bottom: 1px solid black; */
     border-top: 1px solid rgb(178, 178, 178);
    
     min-height: 200px;
@@ -131,6 +134,14 @@ nav{
     left: 84%;
     bottom: 20px;
 
+}
+
+.sii{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* .form{

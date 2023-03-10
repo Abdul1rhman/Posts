@@ -3,8 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import { useSession, signIn, signOut } from "next-auth/react"
+
 
 function Add() {
+
+  const { data: session } = useSession()
+  
+
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
     const [error, setError] = useState("");
@@ -39,7 +45,18 @@ function Add() {
           return setError("All fields are required");
         }
       };
-  
+
+
+        if(!session){
+          return (
+           <Container>
+            <div className="sii">
+                <h2 >You need to signin to Post :)</h2>
+                <Button variant="dark" onClick={() => signIn()}>Sign in</Button>
+            </div>
+            </Container>
+          )
+        }
   
     return (
     <div>
@@ -75,7 +92,7 @@ function Add() {
       </Form.Group>
       
       <Form.Group style={{marginTop:'20px'}}>
-        <Button type="submit" className="submit_btn">
+        <Button variant="dark" type="submit" className="submit_btn">
           Add Post
         </Button>
       </Form.Group>
