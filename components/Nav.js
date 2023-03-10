@@ -7,7 +7,7 @@ export default function Nav() {
     <nav>
       <Container>
       <div className="nav-cont">
-        <h2><Link href='/' style={{textDecoration:'none',color:'black'}}>Posts </Link></h2>
+        <h2><Link href='/' style={{textDecoration:'none',color:'#ffffff'}}>Posts </Link></h2>
 
         <ul>
           <li><Link href='/posts' >Add Post </Link></li>
