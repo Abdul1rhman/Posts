@@ -17,7 +17,7 @@ function Add() {
     const [message, setMessage] = useState("");
     const [show, setShow] = useState(true);
     
-    const email = session.user.email
+    const [email, setEmail]=useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -62,8 +62,10 @@ function Add() {
         }
   
     return (
+      
     <div>
 <Container>
+{setEmail(session.user.email)}
   
   <Form onSubmit={handleSubmit} >
       {/* {error ? <div className="alert-error">{error}</div> : null} 
