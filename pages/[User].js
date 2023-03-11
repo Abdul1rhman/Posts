@@ -33,6 +33,17 @@ const [error, setError]=useState('')
 
   }
 
+  if(!session){
+    return (
+     <Container>
+      <div className="sii">
+          <h2 >You need to signin to Post :)</h2>
+          <Button variant="dark" onClick={() => signIn()}>Sign in</Button>
+      </div>
+      </Container>
+    )
+  }
+
 
   return (
     
