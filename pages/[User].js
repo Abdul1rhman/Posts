@@ -6,10 +6,12 @@ import Card from 'react-bootstrap/Card';
 import { FaRegEdit } from 'react-icons/fa';
 import { AiOutlineDelete, AiOutlinePlus } from 'react-icons/ai';
 import { BsPatchPlus } from 'react-icons/bs';
+import { useSession } from "next-auth/react";
 
 
 
 function User({posts}) {
+  const { data: session } = useSession()
 
 const [error, setError]=useState('')
   const handelDelete= async (id) => {
@@ -35,8 +37,22 @@ const [error, setError]=useState('')
   return (
     
       <Container>
+
+      <div className='acc'>
+      <div className='acc-img'>
+      {session&&<img src={session.user.image} style={{width:'100px', marginRight:'10px',borderRadius:'20px'}} />}
+      {session&& <p>{session.user.name}</p>}
+      {session&& <p className='em'>{session.user.email}</p>}
+      </div>
+      
+
+      <div className='acc-info'>
+      
+        <p>Posts: {posts.length}</p>
+      </div>
+      </div>
       <div className='home-cont'> 
-      <h1 className='home-head'>Recent Time Line</h1>
+      <h3 style={{padding:'10px'}}>Your Posts:</h3>
 
     {posts.length >0?
       posts.map(item=>{
