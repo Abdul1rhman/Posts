@@ -14,6 +14,8 @@ export default function Nav() {
         <ul>
           {/* <li><Link href='/posts' >Add Post </Link></li> */}
           {session&&<img src={session.user.image} style={{width:'35px', marginRight:'10px',borderRadius:'10px'}} />}
+          {session&& <Link href={`/${session.user.email}`} style={{textDecoration:'none',color:'#ffffff',marginRight:'10px' }}>Your Posts</Link>}
+
           { session && <li onClick={signOut}>Log Out</li>}
           { !session && <li onClick={signIn}>Signin</li>}
         </ul>
