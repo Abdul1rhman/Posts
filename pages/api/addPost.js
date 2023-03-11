@@ -20,6 +20,8 @@ today = mm + '/' + dd + '/' + yyyy;
 const time = new Date();
 const hour= time.toLocaleString('en-sa', { hour: 'numeric', minute: 'numeric', hour12: true })
 
+
+
 const post = await db.collection("posts").insertOne({
     title,
     content,
