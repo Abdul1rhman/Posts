@@ -18,6 +18,7 @@ function Add() {
     const [show, setShow] = useState(true);
 
 const email = session.user.email
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (title && content) {
