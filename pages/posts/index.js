@@ -17,7 +17,6 @@ function Add() {
     const [message, setMessage] = useState("");
     const [show, setShow] = useState(true);
 
-const email = session.user.email
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,7 +27,6 @@ const email = session.user.email
               body: JSON.stringify({
                 title,
                 content,
-                email,
               }),
               headers: {
                 Accept: "application/json, text/plain, */*",

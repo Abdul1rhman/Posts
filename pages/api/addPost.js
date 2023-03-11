@@ -1,17 +1,13 @@
 import clientPromise from "../../lib/mongodb";
-import { useSession } from "next-auth/react"
-
-
 
 export default async (req, res )=>{
 try{
 
 const client = await clientPromise
 const db = await client.db("posts")
-const { title, content, email } = req.body;
+const { title, content } = req.body;
 let today = new Date();
 // let hour = today.getHours();
-
 const dd = String(today.getDate()).padStart(2, '0');
 const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 const yyyy = today.getFullYear();
@@ -22,12 +18,12 @@ const hour= time.toLocaleString('en-sa', { hour: 'numeric', minute: 'numeric', h
 
 
 
+
 const post = await db.collection("posts").insertOne({
     title,
     content,
     today,
-    hour,
-    email
+    hour
   });
   res.json(post);
 
