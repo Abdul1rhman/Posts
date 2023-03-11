@@ -28,7 +28,7 @@ function Add() {
               body: JSON.stringify({
                 title,
                 content,
-                email
+                
               }),
               headers: {
                 Accept: "application/json, text/plain, */*",
