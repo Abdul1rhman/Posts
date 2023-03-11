@@ -5,7 +5,7 @@ try{
 
 const client = await clientPromise
 const db = await client.db("posts")
-const { title, content, email } = req.body;
+const { title, content} = req.body;
 let today = new Date();
 // let hour = today.getHours();
 const dd = String(today.getDate()).padStart(2, '0');
@@ -22,7 +22,6 @@ const hour= time.toLocaleString('en-sa', { hour: 'numeric', minute: 'numeric', h
 const post = await db.collection("posts").insertOne({
     title,
     content,
-    email,
     today,
     hour
   });
