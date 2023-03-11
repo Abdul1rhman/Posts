@@ -1,7 +1,7 @@
 import clientPromise from "../../lib/mongodb";
 import { useSession } from "next-auth/react"
 
-const { data: session } = useSession()
+
 
 export default async (req, res )=>{
 try{
@@ -18,7 +18,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 const time = new Date();
 const hour= time.toLocaleString('en-sa', { hour: 'numeric', minute: 'numeric', hour12: true })
-
+const { data: session } = useSession()
 const email = session.user.email
 
 
