@@ -65,7 +65,7 @@ function Add() {
       
     <div>
 <Container>
-{setEmail(session.user.email)}
+{session&&setEmail(session.user.email)}
   
   <Form onSubmit={handleSubmit} >
       {/* {error ? <div className="alert-error">{error}</div> : null} 
