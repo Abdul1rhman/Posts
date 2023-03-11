@@ -8,7 +8,7 @@ try{
 
 const client = await clientPromise
 const db = await client.db("posts")
-const { title, content } = req.body;
+const { title, content, email } = req.body;
 let today = new Date();
 // let hour = today.getHours();
 const dd = String(today.getDate()).padStart(2, '0');
@@ -18,8 +18,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 const time = new Date();
 const hour= time.toLocaleString('en-sa', { hour: 'numeric', minute: 'numeric', hour12: true })
-const { data: session } = useSession()
-const email = session.user.email
+
 
 
 
