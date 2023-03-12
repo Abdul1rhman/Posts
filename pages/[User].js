@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import { FaRegEdit } from 'react-icons/fa';
 import { AiOutlineDelete, AiOutlinePlus } from 'react-icons/ai';
 import { BsPatchPlus } from 'react-icons/bs';
-import { useSession } from "next-auth/react";
+import { useSession,signIn } from "next-auth/react";
 
 
 

@@ -15,15 +15,19 @@ function Add() {
     const [content, setContent] = useState("");
     const [error, setError] = useState("");
     const [message, setMessage] = useState("");
-    const [show, setShow] = useState(true);
     
-    const [email, setEmail]=useState('')
-
+    
+    // const [email, setEmail]=useState('')
+    
+    
+   
+    
     const handleSubmit = async (e) => {
-      setEmail(session.user.email)
+      
 
         e.preventDefault();
         if (title && content) {
+          const email=session.user.email
           try {
             let response = await fetch("https://posts-sh.vercel.app/api/addPost", {
               method: "POST",
@@ -57,7 +61,7 @@ function Add() {
            <Container>
             <div className="sii">
                 <h2 >You need to signin to Post :)</h2>
-                <Button variant="dark" onClick={() => signIn()}>Sign in</Button>
+                <Button variant="dark" onClick={signIn}>Sign in</Button>
             </div>
             </Container>
           )
@@ -76,6 +80,7 @@ function Add() {
       
       <Form.Group style={{marginTop:'20px'}}>
         <Form.Label style={{fontWeight:'bold'}}>Title</Form.Label>
+      
         <Form.Control
           type= "text"
           placeholder= "Title of the post"
@@ -103,6 +108,7 @@ function Add() {
         </Button>
       </Form.Group>
     </Form>
+    
     </Container>
 
 
