@@ -95,7 +95,6 @@ const [error, setError]=useState('')
     
   }):<h1 style={{textAlign:'center', paddingBottom:'200px',marginTop:'200px',}}>there is no posts &#128542;??</h1>
 }      
-        <Link className='add-post-but' style={{textDecoration:'none',color:'white'}} href="/posts"><BsPatchPlus style={{fontSize:'40px'}}/></Link>
 
       </div>
       </Container>
