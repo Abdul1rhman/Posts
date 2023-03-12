@@ -226,7 +226,7 @@ nav{
         text-align: center;
     }
    
-    .card p{
+    .card-post p{
         font-size: 15px;
         margin-top: 5px;
         
@@ -234,7 +234,7 @@ nav{
     
     }
 
-    .card h2{
+    .card-post h2{
         font-size: 20px;
         margin-top: 5px;
         
@@ -242,7 +242,7 @@ nav{
     
     }
 
-    .card .my{
+    .card-post .my{
        
         font-size: 12px;
         
