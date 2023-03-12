@@ -82,7 +82,7 @@ nav{
 
 }
 
-.card{
+.card-post{
     margin-top: 10px;
     margin-bottom: 10px;
     /* background-color: rgb(255, 255, 255); */
@@ -97,7 +97,7 @@ nav{
 
 }
 
-.card::after{
+.card-post::after{
     position: absolute;
     content: "";
     height: 1px;
@@ -111,7 +111,7 @@ nav{
 
 }
 
-.card h2{
+.card-post h2{
     border-bottom: 1px solid black;
     padding-bottom: 15px;
     font-weight: 700;
@@ -120,15 +120,15 @@ nav{
 
 }
 
-.card p{
+.card-post p{
     font-size: 25px;
-    margin-top: 10px;
+    margin-top: 40px;
     
     
 
 }
 
-.card Button{
+.card-post Button{
     width: 100px;
     
     

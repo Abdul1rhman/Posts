@@ -69,7 +69,7 @@ const [error, setError]=useState('')
       posts.map(item=>{
         return(
           <div className='post-cont' key={item._id}>
-            <div className='card'>
+            <div className='card-post'>
                <h2>{item.title}</h2>
                <p>{item.content}</p>
                <p></p>
