@@ -78,11 +78,11 @@ const [error, setError]=useState('')
               
                 
                 </div>
-                <Card.Footer className="text-muted mt-4 time">
-                date: {item.today}- hour: {item.hour} 
+                <div className="text-muted mt-4 time">
+                date: {item.today} 
                 
                 
-                </Card.Footer>  
+                </div>  
 
                 <div className='time-icon' style={{ color:'black',display:'flex', justifyContent:'end',alignItems:'center', gap:'10px',fontSize:'20px'}}>
                 <Link className="" style={{textDecoration:'none', color:'black',display:'flex', justifyContent:'end',alignItems:'center'}} href={`/posts/${item._id}`}><FaRegEdit/></Link>

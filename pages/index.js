@@ -49,13 +49,13 @@ const [error, setError]=useState('')
                
                 <div className='but'>
               
-                
+               
                 </div>
-                <Card.Footer className="text-muted mt-4 time">
-                date: {item.today}- hour: {item.hour} 
+                <div className="text-muted mt-4 time">
+                date: {item.today}
                 
                 
-                </Card.Footer>  
+                </div>    
                 
 
             </div>
