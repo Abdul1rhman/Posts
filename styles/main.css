@@ -128,6 +128,19 @@ nav{
 
 }
 
+.time{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+}
+
+.time-icon{
+    position: absolute;
+    bottom: 0;
+    left: 94%;
+    padding-bottom: 10px;
+}
+
 .card-post Button{
     width: 100px;
     
@@ -262,6 +275,14 @@ nav{
 
     .time{
         font-size: 12px;
+       
+    }
+
+    .time-icon{
+        position: absolute;
+        bottom: 0;
+        left: 83%;
+        padding-bottom: 10px;
     }
 }
 
