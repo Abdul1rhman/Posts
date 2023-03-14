@@ -48,12 +48,7 @@ const [error, setError]=useState('')
                <h2>{item.title}</h2>
                <p>{item.content}</p>
 
-               {item.images.map((image, index) => (
-              <div key={index} className="image-item">
-                <img src={image['data_url']} alt="" width="100" />
-                
-              </div>
-            ))}
+               
                
            
                 <div className='but'>
