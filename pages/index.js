@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import { FaRegEdit } from 'react-icons/fa';
 import { AiOutlineDelete, AiOutlinePlus } from 'react-icons/ai';
 import { BsPatchPlus } from 'react-icons/bs';
+import ImageUploading from 'react-images-uploading';
 
 
 
@@ -40,13 +41,21 @@ const [error, setError]=useState('')
 
     {posts.length >0?
       posts.map(item=>{
+        
         return(
           <div className='post-cont' key={item._id}>
             <div className='card-post'>
                <h2>{item.title}</h2>
                <p>{item.content}</p>
-               <p></p>
+
+               {item.images.map((image, index) => (
+              <div key={index} className="image-item">
+                <img src={image['data_url']} alt="" width="100" />
+                
+              </div>
+            ))}
                
+           
                 <div className='but'>
               
                
@@ -55,7 +64,11 @@ const [error, setError]=useState('')
                 date: {item.today}
                 
                 
-                </div>    
+                </div>  
+                <div className='time-icon' style={{ color:'black',display:'flex', justifyContent:'end',alignItems:'center', gap:'10px',fontSize:'20px'}}>
+                <Link className="" style={{textDecoration:'none', color:'black',display:'flex', justifyContent:'end',alignItems:'center'}} href={`/posts/${item._id}`}><FaRegEdit/></Link>
+                <div style={{cursor:'pointer',display:'flex', justifyContent:'end',alignItems:'center',color:'red'}} className="  " onClick={e=>{handelDelete(item._id)}}><AiOutlineDelete/></div>
+                </div>  
                 
 
             </div>
@@ -64,10 +77,13 @@ const [error, setError]=useState('')
     )
     
   }):<h1 style={{textAlign:'center', paddingBottom:'200px',marginTop:'200px',}}>there is no posts &#128542;??</h1>
+  
 }      
         <Link className='add-post-but' style={{textDecoration:'none',color:'white'}} href="/posts"><BsPatchPlus style={{fontSize:'40px'}}/></Link>
 
       </div>
+
+      
       </Container>
       
       

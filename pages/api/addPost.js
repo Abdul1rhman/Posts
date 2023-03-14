@@ -5,7 +5,7 @@ try{
 
 const client = await clientPromise
 const db = await client.db("posts")
-const { title, content, email} = req.body;
+const { title, content,email, images} = req.body;
 let today = new Date();
 // let hour = today.getHours();
 const dd = String(today.getDate()).padStart(2, '0');
@@ -23,8 +23,9 @@ const post = await db.collection("posts").insertOne({
     title,
     content,
     email,
+    images,
     today,
-    hour
+  
   });
   res.json(post);
 
