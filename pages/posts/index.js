@@ -15,6 +15,8 @@ function Add() {
     const [content, setContent] = useState("");
     const [error, setError] = useState("");
     const [message, setMessage] = useState("");
+
+    const [media,setMedia] = useState("")
     
     
     // const [email, setEmail]=useState('')
@@ -26,15 +28,17 @@ function Add() {
       
 
         e.preventDefault();
+        const mediaUrl =  await imageUpload()
         if (title && content) {
-          const email=session.user.email
+          // const email=session.user.email
           try {
             let response = await fetch("https://posts-sh.vercel.app/api/addPost", {
               method: "POST",
               body: JSON.stringify({
                 title,
                 content,
-                email
+                // email
+                mediaUrl
                 
               }),
               headers: {
@@ -55,17 +59,31 @@ function Add() {
         }
       };
 
+      const imageUpload = async ()=>{
+        const data =  new FormData()
+        data.append('file',media)
+        data.append('upload_preset',"hmj2zedt")
+        data.append('cloud_name',"dsxaegep2")
+        const res = await fetch("	https://api.cloudinary.com/v1_1/dsxaegep2/image/upload",{
+          method:"POST",
+          body:data
+        })
+        const res2  = await res.json()
+        return res2.url
+        console.log(res2.url)
+   }
 
-        if(!session){
-          return (
-           <Container>
-            <div className="sii">
-                <h2 >You need to signin to Post :)</h2>
-                <Button variant="dark" onClick={signIn}>Sign in</Button>
-            </div>
-            </Container>
-          )
-        }
+
+        // if(!session){
+        //   return (
+        //    <Container>
+        //     <div className="sii">
+        //         <h2 >You need to signin to Post :)</h2>
+        //         <Button variant="dark" onClick={signIn}>Sign in</Button>
+        //     </div>
+        //     </Container>
+        //   )
+        // }
   
     return (
       
@@ -107,6 +125,10 @@ function Add() {
           Add Post
         </Button>
       </Form.Group>
+      <input type="file" 
+              accept="image/*"
+              onChange={(e)=>setMedia(e.target.files[0])}
+            />
     </Form>
     
     </Container>

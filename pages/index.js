@@ -47,6 +47,7 @@ const [error, setError]=useState('')
             <div className='card-post'>
                <h2>{item.title}</h2>
                <p>{item.content}</p>
+              { item.mediaUrl&& <img src={item.mediaUrl} />}
 
                
                
