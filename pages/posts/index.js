@@ -30,14 +30,14 @@ function Add() {
         e.preventDefault();
         const mediaUrl =  await imageUpload()
         if (title && content) {
-          // const email=session.user.email
+          const email=session.user.email
           try {
             let response = await fetch("https://posts-sh.vercel.app/api/addPost", {
               method: "POST",
               body: JSON.stringify({
                 title,
                 content,
-                // email
+                email,
                 mediaUrl
                 
               }),
@@ -74,16 +74,16 @@ function Add() {
    }
 
 
-        // if(!session){
-        //   return (
-        //    <Container>
-        //     <div className="sii">
-        //         <h2 >You need to signin to Post :)</h2>
-        //         <Button variant="dark" onClick={signIn}>Sign in</Button>
-        //     </div>
-        //     </Container>
-        //   )
-        // }
+        if(!session){
+          return (
+           <Container>
+            <div className="sii">
+                <h2 >You need to signin to Post :)</h2>
+                <Button variant="dark" onClick={signIn}>Sign in</Button>
+            </div>
+            </Container>
+          )
+        }
   
     return (
       
