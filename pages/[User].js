@@ -72,7 +72,9 @@ const [error, setError]=useState('')
             <div className='card-post'>
                <h2>{item.title}</h2>
                <p>{item.content}</p>
-               <p></p>
+               { item.mediaUrl&&<div className='img-cont'>
+                { item.mediaUrl&& <img src={item.mediaUrl} style={{width:'300px',borderRadius:'10px',}}/>}
+              </div>}
                
                 <div className='but'>
               
