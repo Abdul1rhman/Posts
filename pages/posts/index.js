@@ -107,7 +107,7 @@ function Add() {
         />
       </Form.Group>
 
-      <Form.Group style={{marginTop:'20px'}}>
+      <Form.Group style={{marginTop:'20px',marginBottom:'20px'}}>
         <Form.Label style={{fontWeight:'bold'}}>Content</Form.Label>
         <Form.Control
          as="textarea"
@@ -119,16 +119,18 @@ function Add() {
           rows={8}
         />
       </Form.Group>
+      <Form.Control type="file" 
+              accept="image/*"
+              onChange={(e)=>setMedia(e.target.files[0])}
+            />
       
       <Form.Group style={{marginTop:'20px'}}>
         <Button variant="dark" type="submit" className="submit_btn">
           Add Post
         </Button>
       </Form.Group>
-      <input type="file" 
-              accept="image/*"
-              onChange={(e)=>setMedia(e.target.files[0])}
-            />
+      
+      
     </Form>
     
     </Container>

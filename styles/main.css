@@ -148,6 +148,16 @@ nav{
     
 
 }
+
+.img-cont{
+    width: fit-content;
+    /* background-color: #121212; */
+    display: flex;
+    /* padding: 10px; */
+    margin-bottom: 15px;
+    border:#bcbcbc 1px solid;
+    border-radius: 10px;
+}
 .image-item{
     display: flex;
     flex-direction: row;
