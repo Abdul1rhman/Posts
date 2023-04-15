@@ -70,7 +70,7 @@ function Add() {
         })
         const res2  = await res.json()
         return res2.url
-        console.log(res2.url)
+        
    }
 
 
